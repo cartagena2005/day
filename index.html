@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti 💖</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 77, 109, 0.5);
+    }
+
+    .photo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="photo">
+  <img src="fotos/amor1.JPEG" alt="Nosotros 💖">
+</div>
+
+    <h1>Buen dia mi princesa hermosa 💕</h1>
+    <p>
+      Espero estes teniendo un bonito dia, lo estes disfrutando, te quiero decir que te amo y ademas, quiero proponerte algo muy especial 💖✨
+    </p>
+    <button onclick="iniciar()">
+      Comenzamos, dale al boton sin miedo mi reina  💖
+    </button>
+  </div>
+
+  <script>
+    function iniciar() {
+      window.location.href = "valentine.html";
+    }
+  </script>
+
+</body>
+</html>

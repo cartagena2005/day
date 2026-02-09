@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>San Valentín 💘</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      width: 500px;
+      max-width: 90%;
+      position: relative;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 25px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 35px;
+      font-size: 2em;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+    }
+
+    button {
+      border: none;
+      border-radius: 35px;
+      padding: 18px 40px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+      z-index: 10;
+    }
+
+    #no {
+      background: #e0e0e0;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    
+    <!-- IMAGEN -->
+    <div class="photo">
+      <img src="fotos/YO1.JPEG" alt="Nosotros 💖">
+    </div>
+
+    <!-- PREGUNTA -->
+    <h1>¿Quieres ser mi San Valentín? 💘</h1>
+
+    <!-- BOTONES -->
+    <div class="buttons">
+      <button id="yes" onclick="aceptar()">Sí 💖</button>
+      <button id="no" onclick="rechazar()">No 😢</button>
+    </div>
+
+  </div>
+
+ <script>
+  let size = 1;
+  let noOffset = 0;
+
+  function rechazar() {
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
+
+    size += 0.35;
+
+    const moveX = Math.random() * 30 - 15;
+    const moveY = Math.random() * 20 - 10;
+
+    yes.style.transform = `scale(${size}) translate(${moveX}px, ${moveY}px)`;
+
+    noOffset += 60;
+    no.style.transform = `translateX(${noOffset}px) scale(0.9)`;
+    no.style.opacity = 1 - size * 0.15;
+
+    if (size > 2.2) {
+      no.style.display = "none";
+    }
+  }
+
+  function aceptar() {
+    window.location.href = "acepto.html";
+  }
+</script>
+
+
+</body>
+</html>
